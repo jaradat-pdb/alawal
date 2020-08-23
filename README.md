@@ -1,8 +1,7 @@
 # alawal
-
 > Alawal Enterprise Application Suite Platform
 
-The first of its kind in enterprise application suite platforms.
+The first of its kind in enterprise application suite platforms :moneybag::heavy_exclamation_mark:
 
 ## Common Commands
 ### cURL
