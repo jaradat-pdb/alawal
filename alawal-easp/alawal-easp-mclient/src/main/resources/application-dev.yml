@@ -1,0 +1,16 @@
+server:
+  error:
+    include-exception: true
+    include-stacktrace: always
+  port: 8890
+spring:
+  data:
+    mongodb:
+      database: alawal
+      host: localhost
+      port: 27017
+      repositories:
+        type: reactive
+  profiles:
+    active:
+    - dev

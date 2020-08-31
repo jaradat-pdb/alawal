@@ -50,7 +50,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 	</properties>
 
 	<modules>
-		<module>alawal-easp-data</module>
+		<module>alawal-easp-ndata</module>
+		<module>alawal-easp-mclient</module>
 	</modules>
 
 	<dependencies>

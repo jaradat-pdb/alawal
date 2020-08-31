@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="60">
+	<Properties>
+		<Property name="LogPattern">%d{yyyy-MM-dd'T'HH:mm:ss.SSSX} [%-5level] | %c{1} | %msg%n%ex</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
+			<PatternLayout pattern="${LogPattern}"/>
+		</Console>
+		<RollingRandomAccessFile name="RollingFileAppender" fileName="./logs/mclient.log" filePattern="./logs/$${date:yyyy-MM}/mclient-%d{yyyyMMdd}-%i.log.gz">
+			<PatternLayout pattern="${LogPattern}"/>
+			<Policies>
+				<!-- rollover when: application starts up, a new day starts, and when a size a limit is reached -->
+				<OnStartupTriggeringPolicy/>
+				<SizeBasedTriggeringPolicy size="15 MB"/>
+				<TimeBasedTriggeringPolicy/>
+			</Policies>
+		</RollingRandomAccessFile>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="org.pdbcorp.easp.alawal" additivity="false">
+			<AppenderRef ref="RollingFileAppender"/>
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="ConsoleAppender"/>
+		</Root>
+	</Loggers>
+</Configuration>
