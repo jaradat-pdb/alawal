@@ -6,6 +6,14 @@ The first of its kind in enterprise application suite platforms :moneybag::heavy
 ***
 
 ## Common Commands
+### Application
+```sh
+java -jar ${jar-file-name}.jar --spring.profiles.active=dev[,local,windows,etc]
+```
+```sh
+mvn spring-boot:run -Dspring-boot.run.profiles=dev -Dhttps.protocols=TLSv1.2 -X
+```
+
 ### cURL
 The following cURL command will retrieve the [Neo4j APOC Library](http://neo4j.com/developer/neo4j-apoc/), v4.1.0.2-all:
 ```sh
